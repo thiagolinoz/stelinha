@@ -1,0 +1,144 @@
+<?php
+namespace AppBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+
+class Horario{
+	
+	private $id;
+	private $horas = "0";
+    private $dia;
+	private $disponivel = 0;
+	private $is_active = 1;
+    private $user;
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set disponivel
+     *
+     * @param boolean $disponivel
+     *
+     * @return Horario
+     */
+    public function setDisponivel($disponivel)
+    {
+        $this->disponivel = $disponivel;
+
+        return $this;
+    }
+
+    /**
+     * Get disponivel
+     *
+     * @return boolean
+     */
+    public function getDisponivel()
+    {
+        return $this->disponivel;
+    }
+
+    /**
+     * Set isActive
+     *
+     * @param boolean $isActive
+     *
+     * @return Horario
+     */
+    public function setIsActive($isActive)
+    {
+        $this->is_active = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * Get isActive
+     *
+     * @return boolean
+     */
+    public function getIsActive()
+    {
+        return $this->is_active;
+    }
+
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Horario
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set horas
+     *
+     * @param string $horas
+     *
+     * @return Horario
+     */
+    public function setHoras($horas)
+    {
+        $this->horas = $horas;
+
+        return $this;
+    }
+
+    /**
+     * Get horas
+     *
+     * @return string
+     */
+    public function getHoras()
+    {
+        return $this->horas;
+    }
+
+    /**
+     * Set dia
+     *
+     * @param integer $dia
+     *
+     * @return Horario
+     */
+    public function setDia($dia)
+    {
+        $this->dia = $dia;
+
+        return $this;
+    }
+
+    /**
+     * Get dia
+     *
+     * @return integer
+     */
+    public function getDia()
+    {
+        return $this->dia;
+    }
+}

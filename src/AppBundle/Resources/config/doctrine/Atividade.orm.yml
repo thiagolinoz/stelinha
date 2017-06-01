@@ -1,0 +1,35 @@
+AppBundle\Entity\Atividade:
+      type: entity
+      repositoryClass: AppBundle\Entity\AtividadeRepository
+      table: app_atividade
+      id:
+         id:
+            type: integer
+            generator: {strategy: AUTO}
+      fields:
+        local:
+             type: string
+             lenght: 5
+        horario_de:
+             type: time
+        horario_ate:
+             type: time
+        descricao:
+              type: text
+        quantidade:
+              type: integer
+              lenght: 1      
+        is_active:
+              type: boolean
+              nullable: true
+              options:
+                  default: 1
+        extra:
+              type: boolean
+              nullable: true
+              options:
+                  default: 0
+      oneToMany:
+        cronograma:
+            targetEntity: Cronograma
+            mappedBy: atividade

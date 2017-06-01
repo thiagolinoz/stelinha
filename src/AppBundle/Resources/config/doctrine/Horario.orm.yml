@@ -1,0 +1,33 @@
+AppBundle\Entity\Horario:
+      type: entity
+      repositoryClass: AppBundle\Entity\HorarioRepository
+      table: app_horario
+      id:
+         id:
+            type: integer
+            generator: {strategy: AUTO}
+      fields:
+        horario_de:
+             type: time
+        horario_ate:
+             type: time
+        dia:
+             type: integer
+             lenght: 1
+        disponivel:
+              type: boolean
+              nullable: true
+              options:
+                  default: 1
+        is_active:
+              type: boolean
+              nullable: true
+              options:
+                  default: 1
+      manyToOne:
+          user:
+            targetEntity: User
+            inversedBy: horarios
+            joinColumn:
+                  name: user_id
+                  referencedColumnName: id

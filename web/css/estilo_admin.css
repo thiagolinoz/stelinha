@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+body {
+	
+/** To edit this background, follow this link:
+http://svgeneration.com/generate/Galaxy?background=00e1ff&density=0.6&star-color=ffffff&
+*/
+background-color: #f57b14 !important;
+}
+#espaco {
+	height: 50px;
+	width: 100%;
+	margin:auto;
+}
+#logo_cliente {
+	width:160px;
+	height: 160px;
+	border: solid 16px #cf6e1c;
+	position: relative;
+	margin:auto;
+	background-color:#FFFFFF;
+	border-radius: 100%;
+}
+
+#fundo_form {
+	height: 260px;
+	width: 400px;
+	margin:auto;
+	margin-top: 40px;
+	position: relative;
+	text-align:center;
+}
+
+#faixameio {
+	background-color: #FFF;
+	height: auto;
+	width: 100%;
+	margin:auto;
+	margin-top: 120px;
+	position: relative;
+	border-top: solid 7px #E41E25;
+	border-bottom: solid 7px #E41E25;
+}
+
+.titulo{
+	font-family: 'Dosis', sans-serif;
+	font-size:24px;
+	font-weight:600;
+	color: #FFFFFF;
+	
+}
+
+
+.input_form_menor {
+	width: 259px !important;
+	height: 45px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	background-color: #cf6e1c;
+	border: solid 1px #FFF;
+	outline: none;
+	padding-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.input_form_menor:hover {
+	width: 259px;
+	height: 45px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #cf6e1c;
+	border: solid 1px #FFF;
+	outline: none;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+
+.input_select {
+	width: 535px;
+	height: 45px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	background-color: #cf6e1c;
+	border: solid 1px #FFF;
+	outline: none;
+	padding-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.input_select:hover {
+	width: 535px;
+	height: 45px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	padding-left: 10px;
+	background-color: #cf6e1c;
+	border: solid 1px #FFF;
+	outline: none;
+	margin-right: 10px;
+	margin-top: 10px;
+}

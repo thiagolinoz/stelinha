@@ -1,0 +1,26 @@
+AppBundle\Entity\Realizada:
+      type: entity
+      repositoryClass: AppBundle\Entity\RealizadaRepository
+      table: app_realizada
+      id:
+         id:
+            type: integer
+            generator: {strategy: AUTO}
+      fields:
+        observacao:
+             type: text
+        horario_de:
+             type: time
+        horario_ate:
+             type: time
+        is_active:
+              type: boolean
+              nullable: true
+              options:
+                  default: 1
+      oneToOne:
+        cronograma:
+            targetEntity: Cronograma
+            joinColumn:
+              name: cronograma_id
+              referencedColumnName: id       

@@ -1,0 +1,96 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+index:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }    
+login:
+    path: /login
+    defaults: { _controller: AppBundle:Security:login }
+colaborador:
+    path: /colaborador/cadastro
+    defaults: { _controller: AppBundle:Colaborador:cadastro }
+colaborador_lista:
+    path: /colaborador/lista
+    defaults: { _controller: AppBundle:Colaborador:lista}
+colaborador_desativa:
+    path: /colaborador/desativa/{id}
+    defaults: { _controller: AppBundle:Colaborador:desativa}
+    requirements:
+        id: '\d+'
+colaborador_edita:
+    path: /colaborador/edita/{id}
+    defaults: { _controller: AppBundle:Colaborador:edita}
+    requirements:
+        id: '\d+'
+colaborador_save:
+    path: /colaborador/save/{id}
+    defaults: { _controller: AppBundle:Colaborador:save, id:null}
+atividade:
+    path: /atividade/cadastro
+    defaults: { _controller: AppBundle:Atividade:cadastro }
+atividade_lista:
+    path: /atividade/lista
+    defaults: { _controller: AppBundle:Atividade:lista}
+atividade_desativa:
+    path: /atividade/desativa/{id}
+    defaults: { _controller: AppBundle:Atividade:desativa}
+    requirements:
+        id: '\d+'
+atividade_edita:
+    path: /atividade/edita/{id}
+    defaults: { _controller: AppBundle:Atividade:edita}
+    requirements:
+        id: '\d+'
+atividade_save:
+    path: /atividade/save/{id}
+    defaults: { _controller: AppBundle:Atividade:save, id:null}
+atividade_extra:
+    path: /atividade/extra
+    defaults: { _controller: AppBundle:Atividade:extra}
+atividade_meuHorario:
+    path: /atividade/meuHorario/{id}
+    defaults: { _controller: AppBundle:Atividade:meuHorario}
+    requirements:
+        id: '\d+'
+cronograma_lista:
+    path: /cronograma/lista
+    defaults: { _controller: AppBundle:Cronograma:lista}
+cronograma_edita:
+    path: /cronograma/edita/{id}
+    defaults: { _controller: AppBundle:Cronograma:edita}
+    requirements:
+        id: '\d+'
+cronograma_gerar:
+    path: /cronograma/gerar/{gerar}
+    defaults: { _controller: AppBundle:Cronograma:gerarHorarios, gerar:null}
+cronograma_save:
+    path: /cronograma/save/{id}
+    defaults: { _controller: AppBundle:Cronograma:save, id:null}
+cronograma_saveExtra:
+    path: /cronograma/saveExtra
+    defaults: { _controller: AppBundle:Cronograma:saveExtra}
+cronograma_lista_meu:
+    path: /cronograma/listaMeu
+    defaults: { _controller: AppBundle:Cronograma:listaMeu}    
+cronograma_desativa:
+    path: /cronograma/exclui/{id}
+    defaults: { _controller: AppBundle:Cronograma:exclui}
+    requirements:
+        id: '\d+'
+cronograma:
+    path: /cronograma/cadastro
+    defaults: { _controller: AppBundle:Cronograma:cadastro}
+cronograma_cadastro_user:
+    path: /cronograma/userByHorario
+    defaults: { _controller: AppBundle:Cronograma:userByHorario}
+cronograma_cadastro_local:
+    path: /cronograma/horarioByLocal
+    defaults: { _controller: AppBundle:Cronograma:horarioByLocal}
+cronograma_finaliza:
+    path: /cronograma/finaliza/{id}
+    defaults: { _controller: AppBundle:Cronograma:finaliza}
+    requirements:
+        id: '\d+'
+logout:
+    path: /logout  

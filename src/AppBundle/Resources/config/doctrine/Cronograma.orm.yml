@@ -1,0 +1,40 @@
+AppBundle\Entity\Cronograma:
+      type: entity
+      repositoryClass: AppBundle\Entity\CronogramaRepository
+      table: app_cronograma
+      id:
+         id:
+            type: integer
+            generator: {strategy: AUTO}
+      fields:
+        total_horas:
+             type: integer
+             lenght: 2
+        observacao:
+             type: string
+             lenght: 5
+             nullable: true
+        horario_de:
+             type: time
+             nullable: true
+        horario_ate:
+             type: time
+             nullable: true
+        is_active:
+              type: boolean
+              nullable: true
+              options:
+                  default: 1
+      manyToOne:
+          atividade:
+            targetEntity: Atividade
+            inversedBy: cronograma
+            joinColumn:
+                  name: atividade_id
+                  referencedColumnName: id
+      oneToOne:
+          horario:
+            targetEntity: Horario
+            joinColumn:
+                  name: horario_id
+                  referencedColumnName: id        
